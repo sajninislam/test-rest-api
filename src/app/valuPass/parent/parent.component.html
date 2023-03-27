@@ -1,0 +1,8 @@
+<div class="form-group" style="margin-left: 30px; margin-top: 10px;">
+<input type="text" class="form-control" name="post" [(ngModel)]="post"/>
+</div>
+<div>
+    <button style="margin-left: 30px; margin-top: 10px;" class="btn btn-sm btn-warning" type="submit" (click)="addPost(post)">Add Post</button>
+</div>
+
+<app-child [childPosts]="parentPost" (passedEvent)="childEvent($event)"></app-child>
